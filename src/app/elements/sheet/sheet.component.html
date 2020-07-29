@@ -1,0 +1,12 @@
+<input id="uploadBtn" type="file" (change)="readExcel($event)" 
+           class="upload input-common" required />
+
+<mat-grid-list [cols]="[colCount]" rowHeight="100px">
+  <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color">
+    {{ tile.text }}
+  </mat-grid-tile>
+</mat-grid-list>
